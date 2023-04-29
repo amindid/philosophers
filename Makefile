@@ -6,7 +6,7 @@
 #    By: aouchaad <aouchaad@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/23 18:06:08 by aouchaad          #+#    #+#              #
-#    Updated: 2023/04/09 22:51:59 by aouchaad         ###   ########.fr        #
+#    Updated: 2023/04/29 08:52:14 by aouchaad         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,9 @@ SRCS	=	dead_philo.c \
 			main_utils.c \
 			routine.c \
 			threads_and_mutexs.c \
-			args_check.c
+			args_check.c \
+			my_usleep.c \
+			take_fork.c
 
 OBJS	=	${SRCS:.c=.o}
 
@@ -23,7 +25,7 @@ NAME	=	philo
 
 CC		=	cc
 
-CFLAGS	=	-Wall -Wextra -Werror
+CFLAGS	=	-Wall -Wextra -Werror -pthread
 
 RM		=	rm -f
 
@@ -41,4 +43,6 @@ clean :
 fclean : clean
 	${RM} ${NAME}
 
-re : fclean
+re : fclean all
+
+it : all clean

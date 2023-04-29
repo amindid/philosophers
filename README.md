@@ -1,2 +1,0 @@
-# philosophers
-not done yet

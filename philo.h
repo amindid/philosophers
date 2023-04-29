@@ -6,7 +6,7 @@
 /*   By: aouchaad <aouchaad@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/23 18:06:15 by aouchaad          #+#    #+#             */
-/*   Updated: 2023/04/09 23:12:40 by aouchaad         ###   ########.fr       */
+/*   Updated: 2023/04/29 08:35:28 by aouchaad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,8 @@ void			philo_is_eating(t_philo *philo);
 void			*routine(void *x);
 void			mutex_init_func(t_glob_info *glob_info);
 void			mutex_destroy_func(t_glob_info *glob_info);
+void			my_usleep(t_philo *philo);
+void			take_fork(t_philo *philo);
 void			variables_initialisation(t_glob_info *glob_info, \
 t_philo *philo);
 
